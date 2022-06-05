@@ -1,0 +1,338 @@
+/*------------------------------------ body ------------------------------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial ,Helvetica , sans-serif;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+/*------------------------------------ header ------------------------------------------*/
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 50px;
+	height: 70px;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	background: rgba(255, 255, 255, 0.5);
+}
+header.sticky{
+	background: rgba(255, 255, 255, 1);
+}
+header:hover{
+	background: rgba(255, 255, 255, 1);
+}
+
+/*------------------------------------ logo ------------------------------------------*/
+.logo{
+	flex: 1;
+}
+.logo a img{
+	border-radius: 7%;
+}
+/*------------------------------------ menu ------------------------------------------*/
+.menu{
+	flex: 3;
+	display: flex;
+}
+.menu li{
+	padding: 0 18px;
+	position: relative;
+}
+.menu li:hover .sub-menu{
+	visibility: visible;
+	top: 45px;
+}
+
+/*------------------------------------ sub-menu ------------------------------------------*/
+.sub-menu{
+	position: absolute;
+	width: auto;
+	display: flex;
+	border: 1px solid #ccc;
+	padding: 10px 0 10px 20px;
+	visibility: hidden;
+	top: 80px;
+	transition: 0.6s;
+	z-index: 1;
+	background-color: #fff;
+}
+.sub-menu ul{
+	padding-left: 20px;
+}
+.sub-menu li ul a{
+	font-weight: normal;
+	font-size: 15px;
+	font-family: Arial ,Helvetica , sans-serif;
+	color: #867979;
+	list-style: decimal;
+	padding: 0 0 15px 0;
+}
+.sub-menu li ul li a:hover{
+	color: tomato;
+	
+}
+.menu li a{
+	font-size: 15px;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------------------------------------ others ------------------------------------------*/
+.others{
+	flex: 1.7;
+	display: flex;
+}
+.others li{
+	padding: 0 12px;
+	position: relative;
+}
+.others li::after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 80%;
+	background: #cccccc;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.others li input{
+	outline: none;
+}
+.others li:first-child{
+	position: relative;
+}
+.others li:first-child input{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #333;
+	background: transparent;
+	outline: none;
+}
+.others li:first-child i{
+	position: absolute;
+	right: 10px;
+}
+
+/*------------------------------------ others ------------------------------------------*/
+#Slider{
+	padding-bottom: 30px;
+	border-bottom: 2px solid #000;
+	overflow: hidden;
+}
+
+/*------------------------------------ aspect-ratio ------------------------------------------*/
+.aspect-ratio-169{
+	display: block;
+	position: relative;
+	padding-top: 56.25%;
+	transition: 0.5s;
+}
+
+.aspect-ratio-169 img,iframe {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 95%;
+	top: 0;
+	left: 0;
+}
+
+/*------------------------------------ dot-container ------------------------------------------*/
+.dot-container{
+	position: absolute;
+	height: 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+.dot {
+	height: 16px;
+	width: 16px;
+	background-color: #CCC;
+	border-radius: 50%;
+	margin-right: 12px;
+	cursor: pointer;
+}
+.dot.active{
+	background-color: #333;
+}
+
+/*----------------------------- App -------------------------------*/
+.app-container{
+	text-align: center;
+	align-items: center;
+	padding: 70px 0 50px 0;
+}
+.app-google{
+	margin: 20px;
+}
+.app-google img{
+	height: 300px;
+	cursor: pointer;
+}
+.app-container p{
+	line-height: 20px;
+	letter-spacing: 1px;
+	font-size: 17px;
+	color: #000;
+	font-weight: bold;
+}
+.app-container input{
+	margin-top: 50px;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding-bottom: 20px;
+	width: 400px;
+	text-align: center;
+	outline: none;
+}
+/*----------------------------- footer -------------------------------*/
+footer{
+	text-align: center;
+}
+.footer-top{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	height: 70px;
+}
+.app-google img {
+	margin-top: -70px;
+	margin-bottom: -50px;
+}
+.footer-top img{
+	height: 80px;
+}
+.footer-top li{
+	padding: 0 12px;
+	position: relative;
+}
+.footer-top li::after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 80%;
+	background: #cccccc;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.footer-top li:last-child::after{
+	display: none;
+}
+.footer-top li:last-child a{
+	margin-right: 12px;
+	color: #333;
+}
+.footer-center{
+	text-align: center;
+}
+.footer-bottom{
+
+	margin: 30px;
+	text-align: center;
+	
+}
+
+
+/*------------------------------------ Giới Thiệu ---------------------------------------------- */
+
+
+
+.Gioithieu li,p {
+	margin: 5px 100px;
+}
+.Gioithieu ul,p {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.TT {
+	margin-right: 80px;
+	margin-left: 80px;
+}
+.TT li{
+	padding: 10px 0;
+}
+.VDTT {
+	margin-top: 50px;
+	margin-bottom: 120px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+ /*--------------------------------repoinsive-----------------------------------------------------*/
+ @media screen and (max-width: 768px){
+	header .menu, header .others{
+		flex-direction: column;
+		padding-top: 15px;
+	
+	}
+
+
+	header{
+		margin: 0;
+		padding: 5px 15px;
+		background: linear-gradient(to right, #4daf54, #3d8880);
+		align-items: center;
+		height: auto;
+		position: unset;
+	}
+
+	header .sub-menu{
+		display: inline-block;
+	}
+
+	header:hover{
+		background: linear-gradient(to right, #4daf54, #3d8880);
+	}
+
+	header .logo a img{
+		justify-content: center;
+		text-align: center;
+		display: block; margin-left: auto; margin-right: auto;
+		align-items: center;
+	}
+
+	header .others li{
+		margin: 0 0;
+		padding:  5px;
+	}
+
+.sub-menu{
+			 width: 100%;
+	        height: auto;
+	        position: fixed;
+	        z-index: 9999;
+	        left: 35%;
+	        transition: 0.6s;
+			z-index: 1;
+			background-color: #fff;
+			position: absolute;
+		}
+		.menu li:hover .sub-menu{
+		visibility: visible;
+		top: 13px;
+	}
+}
+
+}
